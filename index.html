@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emos Been | MATA RUWA Out Now</title>
+    <!-- Font Awesome 6 (Free Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -17,14 +19,13 @@
             color: white;
         }
 
-        /* Main container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Header / Top bar */
+        /* Header */
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -63,7 +64,7 @@
             opacity: 0.6;
         }
 
-        /* Hero Image Section - Picture at the top, NOT full screen */
+        /* Hero Image */
         .hero-image {
             width: 100%;
             height: 450px;
@@ -114,7 +115,7 @@
             transform: scale(0.97);
         }
 
-        /* Social Links - Right under the picture, nicely spaced */
+        /* Social Links - bigger icons + text */
         .social-section {
             text-align: center;
             margin-bottom: 50px;
@@ -126,19 +127,26 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
         .social-link {
             color: white;
             text-decoration: none;
-            font-size: 0.85rem;
-            padding: 8px 20px;
+            font-size: 1rem;  /* Slightly bigger text */
+            padding: 10px 24px;
             border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 40px;
+            border-radius: 50px;
             transition: all 0.2s;
             background: rgba(255,255,255,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-link i {
+            font-size: 1.2rem;  /* Bigger icon */
         }
 
         .social-link:hover {
@@ -147,7 +155,7 @@
             border-color: white;
         }
 
-        /* Tour Section - Medium sized */
+        /* Tour Section - side by side grid (no long scroll) */
         .tour-section {
             margin-bottom: 50px;
         }
@@ -160,46 +168,61 @@
             margin-bottom: 30px;
         }
 
-        .tour-list {
-            max-width: 600px;
-            margin: 0 auto;
+        .tour-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        .tour-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+        .tour-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px 25px;
+            text-align: center;
+            min-width: 160px;
+            transition: all 0.2s;
+        }
+
+        .tour-card:hover {
+            border-color: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        .tour-city {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
 
         .tour-date {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .tour-location {
+            font-size: 0.8rem;
             color: #aaa;
-            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
         .tour-btn {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.4);
             color: white;
-            text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.35);
             padding: 5px 18px;
-            border-radius: 30px;
+            text-decoration: none;
             font-size: 0.7rem;
             letter-spacing: 1px;
+            border-radius: 30px;
             transition: all 0.2s;
         }
 
         .tour-btn:hover {
             background: white;
             color: black;
+            border-color: white;
         }
 
-        /* Merch Section - Medium sized grid */
+        /* Merch Section */
         .merch-section {
             margin-bottom: 50px;
         }
@@ -280,7 +303,6 @@
             color: black;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 30px;
@@ -300,17 +322,22 @@
             .album-title {
                 font-size: 1.8rem;
             }
-            .tour-item {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-            }
             .social-links {
-                gap: 12px;
+                gap: 15px;
             }
             .social-link {
-                padding: 6px 14px;
-                font-size: 0.7rem;
+                padding: 6px 16px;
+                font-size: 0.8rem;
+            }
+            .social-link i {
+                font-size: 1rem;
+            }
+            .tour-grid {
+                gap: 15px;
+            }
+            .tour-card {
+                min-width: 140px;
+                padding: 15px;
             }
             .merch-grid {
                 gap: 20px;
@@ -336,16 +363,24 @@
             </div>
         </div>
 
-        <!-- Picture at the top (medium size, not full screen) -->
+        <!-- Picture at the top -->
         <div class="hero-image"></div>
 
-        <!-- Social links right under the picture -->
+        <!-- Social links with REAL ICONS, slightly bigger -->
         <div class="social-section">
             <div class="social-links">
-                <a href="https://youtube.com/@emos_been" class="social-link" target="_blank">▶ YOUTUBE</a>
-                <a href="https://audiomack.com/emos_been" class="social-link" target="_blank">🎵 AUDIOMACK</a>
-                <a href="https://www.instagram.com/emos_been" class="social-link" target="_blank">📸 INSTAGRAM</a>
-                <a href="https://www.facebook.com/Emosbess" class="social-link" target="_blank">👍 FACEBOOK</a>
+                <a href="https://youtube.com/@emos_been" class="social-link" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://audiomack.com/emos_been" class="social-link" target="_blank">
+                    <i class="fas fa-music"></i> Audiomack
+                </a>
+                <a href="https://www.instagram.com/emos_been" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com/Emosbess" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
             </div>
         </div>
 
@@ -356,28 +391,28 @@
             <a href="#" class="listen-btn">LISTEN NOW</a>
         </div>
 
-        <!-- Tour section -->
+        <!-- Tour section: side-by-side cards (South Sudan towns) -->
         <div class="tour-section" id="tour">
             <h2>TOUR</h2>
-            <div class="tour-list">
-                <div class="tour-item">
-                    <span class="tour-date">MAY 15, 2026</span>
-                    <span class="tour-location">LOS ANGELES, CA</span>
+            <div class="tour-grid">
+                <div class="tour-card">
+                    <div class="tour-city">MALAKAL</div>
+                    <div class="tour-date">MAY 15, 2026</div>
                     <a href="#" class="tour-btn">TICKETS</a>
                 </div>
-                <div class="tour-item">
-                    <span class="tour-date">MAY 18, 2026</span>
-                    <span class="tour-location">SAN FRANCISCO, CA</span>
+                <div class="tour-card">
+                    <div class="tour-city">JUBA</div>
+                    <div class="tour-date">MAY 18, 2026</div>
                     <a href="#" class="tour-btn">TICKETS</a>
                 </div>
-                <div class="tour-item">
-                    <span class="tour-date">MAY 22, 2026</span>
-                    <span class="tour-location">CHICAGO, IL</span>
+                <div class="tour-card">
+                    <div class="tour-city">AWEIL</div>
+                    <div class="tour-date">MAY 22, 2026</div>
                     <a href="#" class="tour-btn">TICKETS</a>
                 </div>
-                <div class="tour-item">
-                    <span class="tour-date">MAY 25, 2026</span>
-                    <span class="tour-location">NEW YORK, NY</span>
+                <div class="tour-card">
+                    <div class="tour-city">RUMBEK</div>
+                    <div class="tour-date">MAY 25, 2026</div>
                     <a href="#" class="tour-btn">TICKETS</a>
                 </div>
             </div>
@@ -419,4 +454,4 @@
         </div>
     </div>
 </body>
-            </html>
+                        </html>
