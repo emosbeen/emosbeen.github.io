@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Emos Been | MATA RUWA Out Now</title>
     <!-- Font Awesome 6 (Free Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,10 +19,13 @@
             color: white;
         }
 
+        /* ZOOMED-IN CONTAINER: makes whole page fit nicely on phone screens */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 12px 16px; /* reduced padding to zoom content slightly */
+            transform: scale(0.96); /* subtle zoom to fit on phone */
+            transform-origin: top center;
         }
 
         /* Header */
@@ -30,13 +33,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0 30px;
+            padding: 12px 0 20px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .site-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             letter-spacing: 3px;
         }
@@ -48,13 +51,13 @@
 
         .nav {
             display: flex;
-            gap: 30px;
+            gap: 24px;
         }
 
         .nav a {
             color: white;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 500;
             letter-spacing: 1.5px;
             transition: opacity 0.2s;
@@ -64,45 +67,57 @@
             opacity: 0.6;
         }
 
-        /* Hero Image */
+        /* Hero Image with blended transition (gradient at bottom to fade into black) */
         .hero-image {
             width: 100%;
-            height: 450px;
+            height: 380px; /* slightly reduced for phone fit */
             background-image: url('https://i.imgur.com/3k2lwiL.jpeg');
             background-size: cover;
             background-position: center;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 20px 20px 0 0;
+            margin-bottom: 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Transition overlay: blends the bottom of the image into the dark background */
+        .image-transition {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, #000 100%);
+            height: 80px;
+            margin-top: -70px;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 20px 20px;
         }
 
         /* Song Info */
         .song-info {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 20px 0 30px;
         }
 
         .album-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .featured-artist {
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 1px;
             color: #aaa;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .listen-btn {
             display: inline-block;
             background: white;
             color: black;
-            padding: 10px 32px;
-            font-size: 0.85rem;
+            padding: 8px 28px;
+            font-size: 0.8rem;
             font-weight: 600;
             text-decoration: none;
             letter-spacing: 2px;
@@ -115,11 +130,11 @@
             transform: scale(0.97);
         }
 
-        /* Social Links - bigger icons + text */
+        /* Social Links - bigger icons & text */
         .social-section {
             text-align: center;
-            margin-bottom: 50px;
-            padding: 20px 0;
+            margin: 20px 0 35px;
+            padding: 16px 0;
             border-top: 1px solid rgba(255,255,255,0.08);
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
@@ -127,26 +142,26 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 24px;
             flex-wrap: wrap;
         }
 
         .social-link {
             color: white;
             text-decoration: none;
-            font-size: 1rem;  /* Slightly bigger text */
-            padding: 10px 24px;
+            font-size: 0.9rem;
+            padding: 8px 20px;
             border: 1px solid rgba(255,255,255,0.2);
             border-radius: 50px;
             transition: all 0.2s;
             background: rgba(255,255,255,0.05);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .social-link i {
-            font-size: 1.2rem;  /* Bigger icon */
+            font-size: 1.1rem;
         }
 
         .social-link:hover {
@@ -155,23 +170,23 @@
             border-color: white;
         }
 
-        /* Tour Section - side by side grid (no long scroll) */
+        /* Tour Section - side by side cards (no long scroll) */
         .tour-section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .tour-section h2 {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 500;
             letter-spacing: 4px;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .tour-grid {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -179,9 +194,9 @@
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 16px;
-            padding: 20px 25px;
+            padding: 16px 20px;
             text-align: center;
-            min-width: 160px;
+            min-width: 140px;
             transition: all 0.2s;
         }
 
@@ -191,16 +206,16 @@
         }
 
         .tour-city {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .tour-date {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #aaa;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .tour-btn {
@@ -208,9 +223,9 @@
             background: transparent;
             border: 1px solid rgba(255,255,255,0.4);
             color: white;
-            padding: 5px 18px;
+            padding: 4px 16px;
             text-decoration: none;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             letter-spacing: 1px;
             border-radius: 30px;
             transition: all 0.2s;
@@ -224,21 +239,21 @@
 
         /* Merch Section */
         .merch-section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .merch-section h2 {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 500;
             letter-spacing: 4px;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .merch-grid {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
@@ -246,9 +261,9 @@
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 16px;
-            padding: 25px 20px;
+            padding: 20px 16px;
             text-align: center;
-            min-width: 200px;
+            min-width: 170px;
             transition: all 0.2s;
         }
 
@@ -258,31 +273,31 @@
         }
 
         .merch-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
             opacity: 0.8;
         }
 
         .merch-title {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
         }
 
         .merch-price {
             color: #aaa;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
         }
 
         .signed-badge {
             display: inline-block;
             border: 0.5px solid rgba(255,255,255,0.4);
-            font-size: 0.6rem;
-            padding: 2px 8px;
+            font-size: 0.55rem;
+            padding: 2px 7px;
             border-radius: 20px;
-            margin-left: 8px;
+            margin-left: 6px;
         }
 
         .merch-btn {
@@ -290,9 +305,9 @@
             background: transparent;
             border: 1px solid white;
             color: white;
-            padding: 6px 20px;
+            padding: 5px 18px;
             text-decoration: none;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             letter-spacing: 2px;
             border-radius: 30px;
             transition: all 0.2s;
@@ -303,48 +318,81 @@
             color: black;
         }
 
+        /* Footer */
         .footer {
             text-align: center;
-            padding: 30px;
-            font-size: 0.7rem;
+            padding: 20px;
+            font-size: 0.65rem;
             color: #555;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Responsive */
+        /* Responsive: perfect fit for phones */
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 8px 12px;
+                transform: scale(0.94);
             }
             .hero-image {
-                height: 280px;
+                height: 320px;
             }
             .album-title {
                 font-size: 1.8rem;
             }
             .social-links {
-                gap: 15px;
+                gap: 12px;
             }
             .social-link {
-                padding: 6px 16px;
+                padding: 6px 14px;
                 font-size: 0.8rem;
             }
             .social-link i {
                 font-size: 1rem;
             }
             .tour-grid {
-                gap: 15px;
+                gap: 12px;
             }
             .tour-card {
-                min-width: 140px;
-                padding: 15px;
+                min-width: 120px;
+                padding: 12px 12px;
+            }
+            .tour-city {
+                font-size: 1rem;
             }
             .merch-grid {
-                gap: 20px;
+                gap: 16px;
             }
             .merch-card {
-                min-width: 160px;
-                padding: 18px 15px;
+                min-width: 150px;
+                padding: 16px 12px;
+            }
+            .merch-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* For very small phones (<= 480px) */
+        @media (max-width: 480px) {
+            .container {
+                transform: scale(0.92);
+                padding: 6px 10px;
+            }
+            .hero-image {
+                height: 260px;
+            }
+            .album-title {
+                font-size: 1.5rem;
+            }
+            .social-link {
+                padding: 5px 10px;
+                font-size: 0.7rem;
+            }
+            .tour-card {
+                min-width: 100px;
+                padding: 10px 8px;
+            }
+            .merch-card {
+                min-width: 130px;
             }
         }
     </style>
@@ -363,10 +411,11 @@
             </div>
         </div>
 
-        <!-- Picture at the top -->
+        <!-- Hero image with smooth transition blend into background -->
         <div class="hero-image"></div>
+        <div class="image-transition"></div> <!-- This creates the fade effect -->
 
-        <!-- Social links with REAL ICONS, slightly bigger -->
+        <!-- Social links with real icons, slightly bigger -->
         <div class="social-section">
             <div class="social-links">
                 <a href="https://youtube.com/@emos_been" class="social-link" target="_blank">
@@ -391,7 +440,7 @@
             <a href="#" class="listen-btn">LISTEN NOW</a>
         </div>
 
-        <!-- Tour section: side-by-side cards (South Sudan towns) -->
+        <!-- Tour section: South Sudan towns, side-by-side -->
         <div class="tour-section" id="tour">
             <h2>TOUR</h2>
             <div class="tour-grid">
