@@ -16,6 +16,7 @@
             background: #000;
             font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
             color: white;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -130,7 +131,7 @@
             background: #ddd;
         }
 
-        /* Social Links */
+        /* Social Section */
         .social-section {
             text-align: center;
             margin: 30px 0;
@@ -167,6 +168,7 @@
         /* Section Headers */
         .section {
             margin: 50px 0;
+            scroll-margin-top: 80px;
         }
 
         .section h2 {
@@ -234,7 +236,7 @@
             color: black;
         }
 
-        /* Clean Signup Box - No Kit Branding */
+        /* Signup Box */
         .signup-box {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
@@ -327,7 +329,6 @@
             margin-top: 20px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero-image { height: 260px; }
             .album-title { font-size: 1.8rem; }
@@ -346,11 +347,11 @@
 <!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
     <div class="close-btn" onclick="closeSidebar()">&times;</div>
-    <a href="#tour">TOUR</a>
-    <a href="#merch">MERCH</a>
-    <a href="#social">SOCIAL</a>
-    <a href="#contact">CONTACT</a>
-    <a href="#help">HELP</a>
+    <a href="#tour-section">TOUR</a>
+    <a href="#merch-section">MERCH</a>
+    <a href="#social-section">SOCIAL</a>
+    <a href="#contact-section">CONTACT</a>
+    <a href="#help-section">HELP</a>
 </div>
 
 <!-- MAIN CONTAINER -->
@@ -365,8 +366,8 @@
     <!-- HERO IMAGE -->
     <div class="hero-image"></div>
 
-    <!-- SOCIAL LINKS -->
-    <div class="social-section" id="social">
+    <!-- SOCIAL SECTION (ID: social-section) -->
+    <div class="social-section" id="social-section">
         <div class="social-links">
             <a href="https://youtube.com/@emos_been" class="social-link" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
             <a href="https://audiomack.com/emos_been" class="social-link" target="_blank"><i class="fas fa-music"></i> Audiomack</a>
@@ -383,8 +384,8 @@
         <a href="https://audiomack.com/emos_been/song/mata-ruw?share-user-id=205584742" class="listen-btn" target="_blank">LISTEN NOW</a>
     </div>
 
-    <!-- TOUR SECTION -->
-    <div class="section" id="tour">
+    <!-- TOUR SECTION (ID: tour-section) -->
+    <div class="section" id="tour-section">
         <h2>TOUR</h2>
         <div class="grid">
             <div class="card">
@@ -412,8 +413,8 @@
         </div>
     </div>
 
-    <!-- MERCH SECTION -->
-    <div class="section" id="merch">
+    <!-- MERCH SECTION (ID: merch-section) -->
+    <div class="section" id="merch-section">
         <h2>MERCH</h2>
         <div class="grid">
             <div class="card">
@@ -443,7 +444,7 @@
         </div>
     </div>
 
-    <!-- CLEAN SIGNUP BOX - NO KIT BRANDING -->
+    <!-- SIGNUP BOX -->
     <div class="signup-box">
         <h3>SIGN UP FOR UPDATES</h3>
         <form class="signup-form" action="https://formspree.io/f/xgvwygzq" method="POST">
@@ -454,14 +455,14 @@
         <p style="font-size: 0.65rem; color: #555; margin-top: 15px;">No spam. Unsubscribe anytime.</p>
     </div>
 
-    <!-- CONTACT BUTTONS (Clean, no visible number/email) -->
-    <div class="contact-buttons" id="contact">
+    <!-- CONTACT SECTION (ID: contact-section) -->
+    <div class="contact-buttons" id="contact-section">
         <a href="https://wa.me/211920646288" class="contact-btn" target="_blank"><i class="fab fa-whatsapp"></i> CHAT ON WHATSAPP</a>
         <a href="mailto:emosbeen6@gmail.com" class="contact-btn" target="_blank"><i class="far fa-envelope"></i> EMAIL US</a>
     </div>
 
-    <!-- HELP CENTER -->
-    <div id="help" style="text-align: center; margin: 20px 0;">
+    <!-- HELP SECTION (ID: help-section) -->
+    <div id="help-section" style="text-align: center; margin: 20px 0;">
         <a href="https://wa.me/211920646288" style="color: #555; text-decoration: none; font-size: 0.8rem;">❓ HELP CENTER</a>
     </div>
 
@@ -482,4 +483,4 @@
 </script>
 
 </body>
-                </html>
+                                                                                             </html>
