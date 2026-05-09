@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Emos Been | TOUR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; font-family: Arial, sans-serif; color: white; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .menu-icon { font-size: 24px; cursor: pointer; }
+        .site-title { font-size: 14px; letter-spacing: 3px; }
+        .site-title a { color: white; text-decoration: none; }
+        .sidebar { height: 100%; width: 0; position: fixed; top: 0; left: 0; background-color: #0a0a0a; overflow-x: hidden; transition: 0.3s; padding-top: 60px; z-index: 100; border-right: 1px solid #222; }
+        .sidebar a { padding: 14px 25px; text-decoration: none; font-size: 16px; color: white; display: block; transition: 0.2s; letter-spacing: 1px; cursor: pointer; }
+        .sidebar a:hover { background: #25D366; color: black; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; }
+        .hero-image { width: 100%; height: 380px; background-image: url('https://i.imgur.com/dSmdTJL.png'); background-size: cover; background-position: center; border-radius: 24px; margin: 20px 0; }
+        .page-title { text-align: center; font-size: 2rem; letter-spacing: 4px; margin: 30px 0; }
+        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; text-align: center; width: 200px; transition: 0.2s; }
+        .card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.3); }
+        .card-image { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; }
+        .card-title { font-weight: 700; font-size: 1.2rem; margin: 10px 0 5px; }
+        .card-date { font-size: 0.8rem; color: #aaa; margin-bottom: 15px; }
+        .card-btn { display: inline-block; background: #25D366; border: none; color: black; padding: 8px 20px; text-decoration: none; font-size: 0.8rem; border-radius: 30px; font-weight: bold; transition: 0.2s; }
+        .card-btn:hover { background: #128C7E; color: white; }
+        .footer { text-align: center; padding: 25px; font-size: 0.7rem; color: #555; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
+        @media (max-width: 768px) { .hero-image { height: 260px; } .card { width: 160px; } .card-image { height: 120px; } }
+    </style>
+</head>
+<body>
+
+<div id="sidebar" class="sidebar">
+    <div class="close-btn" onclick="closeSidebar()">&times;</div>
+    <a href="tour.html">TOUR</a>
+    <a href="merch.html">MERCH</a>
+    <a href="social.html">SOCIAL</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="help.html">HELP</a>
+</div>
+
+<div class="container">
+    <div class="top-bar">
+        <div class="menu-icon" onclick="openSidebar()">☰</div>
+        <div class="site-title"><a href="index.html">EMOS BEEN</a></div>
+        <div style="width: 24px;"></div>
+    </div>
+
+    <div class="hero-image"></div>
+
+    <h1 class="page-title">TOUR DATES</h1>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://i.imgur.com/3YuUZ51.png" class="card-image">
+            <div class="card-title">MALAKAL</div>
+            <div class="card-date">MAY 15, 2026</div>
+            <a href="https://wa.me/211920646288?text=I%20want%20tickets%20for%20MALAKAL" class="card-btn" target="_blank">GET TICKETS</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/veBaCF2.png" class="card-image">
+            <div class="card-title">JUBA</div>
+            <div class="card-date">MAY 18, 2026</div>
+            <a href="https://wa.me/211920646288?text=I%20want%20tickets%20for%20JUBA" class="card-btn" target="_blank">GET TICKETS</a>
+        </div>
+        <div class="card">
+            <div class="card-title">AWEIL</div>
+            <div class="card-date">MAY 22, 2026</div>
+            <a href="https://wa.me/211920646288?text=I%20want%20tickets%20for%20AWEIL" class="card-btn" target="_blank">GET TICKETS</a>
+        </div>
+        <div class="card">
+            <div class="card-title">RUMBEK</div>
+            <div class="card-date">MAY 25, 2026</div>
+            <a href="https://wa.me/211920646288?text=I%20want%20tickets%20for%20RUMBEK" class="card-btn" target="_blank">GET TICKETS</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 EMOS BEEN · MATA RUWA OUT NOW
+    </div>
+</div>
+
+<script>
+    function openSidebar() { document.getElementById("sidebar").style.width = "250px"; }
+    function closeSidebar() { document.getElementById("sidebar").style.width = "0"; }
+</script>
+
+</body>
+  </html>
