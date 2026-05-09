@@ -19,7 +19,6 @@
             color: white;
         }
 
-        /* FIXED: No transform scale - now normal size like dontoliver.com */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -65,11 +64,11 @@
             opacity: 0.6;
         }
 
-        /* Hero Image with blended transition */
+        /* Hero Image */
         .hero-image {
             width: 100%;
             height: 380px;
-            background-image: url('https://i.imgur.com/3k2lwiL.jpeg');
+            background-image: url('https://i.imgur.com/dSmdTJL.png');
             background-size: cover;
             background-position: center;
             border-radius: 20px 20px 0 0;
@@ -79,7 +78,6 @@
             z-index: 1;
         }
 
-        /* Transition overlay */
         .image-transition {
             background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, #000 100%);
             height: 80px;
@@ -128,7 +126,7 @@
             transform: scale(0.97);
         }
 
-        /* Social Links */
+        /* Social Section */
         .social-section {
             text-align: center;
             margin: 20px 0 35px;
@@ -203,6 +201,14 @@
             transform: translateY(-3px);
         }
 
+        .tour-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
         .tour-city {
             font-size: 1.1rem;
             font-weight: 700;
@@ -233,6 +239,13 @@
             background: white;
             color: black;
             border-color: white;
+        }
+
+        /* WhatsApp button override */
+        .tour-btn-wa:hover {
+            background: #25D366;
+            color: black;
+            border-color: #25D366;
         }
 
         /* Merch Section */
@@ -270,10 +283,12 @@
             transform: translateY(-3px);
         }
 
-        .merch-icon {
-            font-size: 1.8rem;
+        .merch-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
             margin-bottom: 12px;
-            opacity: 0.8;
         }
 
         .merch-title {
@@ -316,6 +331,13 @@
             color: black;
         }
 
+        /* WhatsApp button override */
+        .merch-btn-wa:hover {
+            background: #25D366;
+            color: black;
+            border-color: #25D366;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -325,7 +347,7 @@
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Responsive: FIXED - no transform scale anywhere */
+        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 8px 12px;
@@ -343,9 +365,6 @@
                 padding: 6px 14px;
                 font-size: 0.8rem;
             }
-            .social-link i {
-                font-size: 1rem;
-            }
             .tour-grid {
                 gap: 12px;
             }
@@ -353,8 +372,8 @@
                 min-width: 120px;
                 padding: 12px 12px;
             }
-            .tour-city {
-                font-size: 1rem;
+            .tour-image {
+                height: 100px;
             }
             .merch-grid {
                 gap: 16px;
@@ -363,32 +382,23 @@
                 min-width: 150px;
                 padding: 16px 12px;
             }
-            .merch-icon {
-                font-size: 1.5rem;
+            .merch-image {
+                height: 120px;
             }
         }
 
-        /* For very small phones */
         @media (max-width: 480px) {
-            .container {
-                padding: 6px 10px;
-            }
             .hero-image {
                 height: 260px;
             }
             .album-title {
                 font-size: 1.5rem;
             }
-            .social-link {
-                padding: 5px 10px;
-                font-size: 0.7rem;
+            .tour-image {
+                height: 80px;
             }
-            .tour-card {
-                min-width: 100px;
-                padding: 10px 8px;
-            }
-            .merch-card {
-                min-width: 130px;
+            .merch-image {
+                height: 100px;
             }
         }
     </style>
@@ -423,6 +433,9 @@
                 <a href="https://www.instagram.com/emos_been" class="social-link" target="_blank">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
+                <a href="https://www.tiktok.com/@emos_been" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
                 <a href="https://www.facebook.com/Emosbess" class="social-link" target="_blank">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
@@ -433,7 +446,7 @@
         <div class="song-info">
             <div class="album-title">MATA RUWA</div>
             <div class="featured-artist">ft. Wreal X</div>
-            <a href="#" class="listen-btn">LISTEN NOW</a>
+            <a href="https://audiomack.com/emos_been/song/mata-ruw?share-user-id=205584742" class="listen-btn" target="_blank">LISTEN NOW</a>
         </div>
 
         <!-- Tour section -->
@@ -441,55 +454,61 @@
             <h2>TOUR</h2>
             <div class="tour-grid">
                 <div class="tour-card">
+                    <img src="https://i.imgur.com/3YuUZ51.png" alt="Malakal Concert" class="tour-image">
                     <div class="tour-city">MALAKAL</div>
                     <div class="tour-date">MAY 15, 2026</div>
-                    <a href="#" class="tour-btn">TICKETS</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20tickets%20for%20MALAKAL%20on%20MAY%2015%2C%202026%20via%20MoMo" class="tour-btn tour-btn-wa" target="_blank">BOOK VIA WHATSAPP</a>
                 </div>
                 <div class="tour-card">
+                    <img src="https://i.imgur.com/veBaCF2.png" alt="Juba Concert" class="tour-image">
                     <div class="tour-city">JUBA</div>
                     <div class="tour-date">MAY 18, 2026</div>
-                    <a href="#" class="tour-btn">TICKETS</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20tickets%20for%20JUBA%20on%20MAY%2018%2C%202026%20via%20MoMo" class="tour-btn tour-btn-wa" target="_blank">BOOK VIA WHATSAPP</a>
                 </div>
                 <div class="tour-card">
                     <div class="tour-city">AWEIL</div>
                     <div class="tour-date">MAY 22, 2026</div>
-                    <a href="#" class="tour-btn">TICKETS</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20tickets%20for%20AWEIL%20on%20MAY%2022%2C%202026%20via%20MoMo" class="tour-btn tour-btn-wa" target="_blank">BOOK VIA WHATSAPP</a>
                 </div>
                 <div class="tour-card">
                     <div class="tour-city">RUMBEK</div>
                     <div class="tour-date">MAY 25, 2026</div>
-                    <a href="#" class="tour-btn">TICKETS</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20tickets%20for%20RUMBEK%20on%20MAY%2025%2C%202026%20via%20MoMo" class="tour-btn tour-btn-wa" target="_blank">BOOK VIA WHATSAPP</a>
                 </div>
             </div>
         </div>
 
-        <!-- Merch section -->
+        <!-- Merch section (UPDATED with product images) -->
         <div class="merch-section" id="merch">
             <h2>MATA RUWA</h2>
             <div class="merch-grid">
+                <!-- Signed CD -->
                 <div class="merch-card">
-                    <div class="merch-icon">💿</div>
+                    <img src="https://i.imgur.com/bLErk45.png" alt="Signed CD" class="merch-image">
                     <div class="merch-title">SIGNED CD</div>
                     <div class="merch-price">$15.00 <span class="signed-badge">SIGNED</span></div>
-                    <a href="#" class="merch-btn">BUY NOW</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20the%20SIGNED%20CD%20for%20%2415%20via%20MoMo" class="merch-btn merch-btn-wa" target="_blank">BUY ON WHATSAPP</a>
                 </div>
+                <!-- Limited Vinyl -->
                 <div class="merch-card">
-                    <div class="merch-icon">🎵</div>
+                    <img src="https://i.imgur.com/8kSZwKi.png" alt="Limited Vinyl" class="merch-image">
                     <div class="merch-title">LIMITED VINYL</div>
                     <div class="merch-price">$33.00 <span class="signed-badge">SIGNED</span></div>
-                    <a href="#" class="merch-btn">BUY NOW</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20the%20LIMITED%20VINYL%20for%20%2433%20via%20MoMo" class="merch-btn merch-btn-wa" target="_blank">BUY ON WHATSAPP</a>
                 </div>
+                <!-- Hoodie -->
                 <div class="merch-card">
-                    <div class="merch-icon">👕</div>
+                    <img src="https://i.imgur.com/xdHR50m.png" alt="DROP 1 Hoodie" class="merch-image">
                     <div class="merch-title">DROP 1 HOODIE</div>
                     <div class="merch-price">$65.00</div>
-                    <a href="#" class="merch-btn">BUY NOW</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20the%20HOODIE%20for%20%2465%20via%20MoMo" class="merch-btn merch-btn-wa" target="_blank">BUY ON WHATSAPP</a>
                 </div>
+                <!-- Snapback -->
                 <div class="merch-card">
-                    <div class="merch-icon">🧢</div>
+                    <img src="https://i.imgur.com/U6XUyeI.png" alt="Snapback" class="merch-image">
                     <div class="merch-title">SNAPBACK</div>
                     <div class="merch-price">$30.00</div>
-                    <a href="#" class="merch-btn">BUY NOW</a>
+                    <a href="https://wa.me/211920646288?text=Hello%20Emos%2C%20I%20want%20to%20buy%20the%20SNAPBACK%20for%20%2430%20via%20MoMo" class="merch-btn merch-btn-wa" target="_blank">BUY ON WHATSAPP</a>
                 </div>
             </div>
         </div>
@@ -499,4 +518,4 @@
         </div>
     </div>
 </body>
-                        </html>
+    </html>
