@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Emos Been | SOCIAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; font-family: Arial, sans-serif; color: white; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 0 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .menu-icon { font-size: 24px; cursor: pointer; }
+        .site-title { font-size: 14px; letter-spacing: 3px; }
+        .site-title a { color: white; text-decoration: none; }
+        .sidebar { height: 100%; width: 0; position: fixed; top: 0; left: 0; background-color: #0a0a0a; overflow-x: hidden; transition: 0.3s; padding-top: 60px; z-index: 100; border-right: 1px solid #222; }
+        .sidebar a { padding: 14px 25px; text-decoration: none; font-size: 16px; color: white; display: block; transition: 0.2s; letter-spacing: 1px; cursor: pointer; }
+        .sidebar a:hover { background: #25D366; color: black; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; }
+        .hero-image { width: 100%; height: 380px; background-image: url('https://i.imgur.com/dSmdTJL.png'); background-size: cover; background-position: center; border-radius: 24px; margin: 20px 0; }
+        .page-title { text-align: center; font-size: 2rem; letter-spacing: 4px; margin: 30px 0; }
+        .social-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin: 50px 0; }
+        .social-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 60px; padding: 18px 35px; text-align: center; transition: 0.2s; }
+        .social-card:hover { transform: scale(1.05); background: white; }
+        .social-card:hover .social-icon { color: black; }
+        .social-card:hover .social-name { color: black; }
+        .social-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+        .social-name { font-size: 1rem; letter-spacing: 1px; }
+        .footer { text-align: center; padding: 25px; font-size: 0.7rem; color: #555; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
+        @media (max-width: 768px) { .hero-image { height: 260px; } .social-card { padding: 12px 25px; } }
+    </style>
+</head>
+<body>
+
+<div id="sidebar" class="sidebar">
+    <div class="close-btn" onclick="closeSidebar()">&times;</div>
+    <a href="tour.html">TOUR</a>
+    <a href="merch.html">MERCH</a>
+    <a href="social.html">SOCIAL</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="help.html">HELP</a>
+</div>
+
+<div class="container">
+    <div class="top-bar">
+        <div class="menu-icon" onclick="openSidebar()">☰</div>
+        <div class="site-title"><a href="index.html">EMOS BEEN</a></div>
+        <div style="width: 24px;"></div>
+    </div>
+
+    <div class="hero-image"></div>
+
+    <h1 class="page-title">FOLLOW ME</h1>
+
+    <div class="social-grid">
+        <a href="https://youtube.com/@emos_been" class="social-card" target="_blank" style="text-decoration: none; color: white;">
+            <i class="fab fa-youtube social-icon"></i>
+            <span class="social-name">YOUTUBE</span>
+        </a>
+        <a href="https://audiomack.com/emos_been" class="social-card" target="_blank" style="text-decoration: none; color: white;">
+            <i class="fas fa-music social-icon"></i>
+            <span class="social-name">AUDIOMACK</span>
+        </a>
+        <a href="https://www.instagram.com/emos_been" class="social-card" target="_blank" style="text-decoration: none; color: white;">
+            <i class="fab fa-instagram social-icon"></i>
+            <span class="social-name">INSTAGRAM</span>
+        </a>
+        <a href="https://www.tiktok.com/@emos_been" class="social-card" target="_blank" style="text-decoration: none; color: white;">
+            <i class="fab fa-tiktok social-icon"></i>
+            <span class="social-name">TIKTOK</span>
+        </a>
+        <a href="https://www.facebook.com/Emosbess" class="social-card" target="_blank" style="text-decoration: none; color: white;">
+            <i class="fab fa-facebook social-icon"></i>
+            <span class="social-name">FACEBOOK</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 EMOS BEEN · MATA RUWA OUT NOW
+    </div>
+</div>
+
+<script>
+    function openSidebar() { document.getElementById("sidebar").style.width = "250px"; }
+    function closeSidebar() { document.getElementById("sidebar").style.width = "0"; }
+</script>
+
+</body>
+</html>
